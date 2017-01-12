@@ -12,7 +12,7 @@
     <!-- <script src="https://use.fontawesome.com/45e03a14ce.js "></script> -->
 </head>
 <header>
-    <nav class="navbar navbar-default ">
+    <nav class="navbar navbar-default nav_bar_margin">
         <div class="container-fluid ">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header ">
@@ -51,250 +51,696 @@
         <!-- /.container-fluid -->
     </nav>
 </header>
-<div class="jumbotron">
-<div class="main_section ">
-    <div class="container ">
-        <div class="row ">
-            <div class="col-sm-7 col-md-7 col-lg-7 bs-example ">
-                <div class="col-sm-12 col-md-12 col-lg-12 bs-example">
-                    <div class="chat_container ">
-                        <div class="col-sm-4 col-md-4 col-lg-4 chat_sidebar">
-                            <div class="row ">
-                                <div class="dropdown all_conversation ">
-                                    <button class="dropdown-toggle " type="button " id="dropdownMenu2 " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
-                                        <i class="fa fa-weixin " aria-hidden="true "></i> Todas
-                                        <span class="caret pull-right "></span>
-                                    </button>
-                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenu2 ">
-                                        <li><a href="# "> Todas </a>
-                                            <li><a href="# "> Asignadas </a></li>
-                                            <li><a href="# "> Por monitorear</a></li>
-                                    </ul>
+<body>
+    <div class="main_section body-background">
+        <div class="container ">
+            <div class="row ">
+                <div class="without-padding col-sm-7 col-md-7 col-lg-7">
+                    <div class="col-sm-12 col-md-12 col-lg-12 bs-example">
+                        <div class="chat_container ">
+                            <div class="col-sm-4 col-md-4 col-lg-4 chat_sidebar">
+                                <div class="row ">
+                                    <div class="dropdown all_conversation ">
+                                        <button class="dropdown-toggle " type="button " id="dropdownMenu2 " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                            <i class="fa fa-weixin " aria-hidden="true "></i> Todas
+                                            <span class="caret pull-right "></span>
+                                        </button>
+                                        <ul class="dropdown-menu " aria-labelledby="dropdownMenu2 ">
+                                            <li><a href="# "> Todas </a>
+                                                <li><a href="# "> Asignadas </a></li>
+                                                <li><a href="# "> Por monitorear</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of dropdown all_conversation -->
+                                    <div class="member_list ">
+                                        <ul class="list-unstyled ">
+                                            <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
+                                                <span class="chat-img pull-left">
+                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
+                                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="header_sec">
+                                                        <strong class="primary-font">Conversacion 1 </strong>
+                                                        <!-- <span class="badge baged-background-color pull-right">3</span> -->
+                                                    </div>
+                                                    <div class="contact_sec">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
+                                                <span class="chat-img pull-left">
+                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
+                                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="header_sec">
+                                                        <strong class="primary-font">Conversacion 2 </strong>
+                                                        <!-- <span class="badge baged-background-color pull-right">3</span> -->
+                                                    </div>
+                                                    <div class="contact_sec">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
+                                                <span class="chat-img pull-left">
+                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
+                                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="header_sec">
+                                                        <strong class="primary-font">Conversacion 3 </strong>
+                                                        <!-- <span class="badge baged-background-color pull-right">3</span> -->
+                                                    </div>
+                                                    <div class="contact_sec">
+                                                    
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
+                                                <span class="chat-img pull-left">
+                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
+                                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="header_sec">
+                                                        <strong class="primary-font">Conversacion 4 </strong>
+                                                        <!-- <span class="badge baged-background-color pull-right">3</span> -->
+                                                    </div>
+                                                    <div class="contact_sec">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
+                                                <span class="chat-img pull-left">
+                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
+                                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="header_sec">
+                                                        <strong class="primary-font">Conversacion 5 </strong>
+                                                        <!-- <span class="badge baged-background-color pull-right">3</span> -->
+                                                    </div>
+                                                    <div class="contact_sec">
+                                                     
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of member_list -->
                                 </div>
-                                <!-- End of dropdown all_conversation -->
-                                <div class="member_list ">
-                                    <ul class="list-unstyled ">
-                                        <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
-                                            <span class="chat-img pull-left">
-                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header_sec">
-                                                    <strong class="primary-font">Conversacion 1 </strong>
-                                                    <span class="badge baged-background-color pull-right">3</span>
-                                                </div>
-                                                <div class="contact_sec">
-                                                    <p class="primary-font"> [09:45AM] Hola requiero informacion 
-                                                    <!-- <p class="pull-right"> </p> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
-                                            <span class="chat-img pull-left">
-                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header_sec">
-                                                    <strong class="primary-font">Conversacion 2 </strong>
-                                                    <span class="badge baged-background-color pull-right">3</span>
-                                                </div>
-                                                <div class="contact_sec">
-                                                    <p class="primary-font"> [09:45AM] Hola requiero informacion 
-                                                    <!-- <p class="pull-right"> </p> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
-                                            <span class="chat-img pull-left">
-                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header_sec">
-                                                    <strong class="primary-font">Conversacion 3 </strong>
-                                                    <span class="badge baged-background-color pull-right">3</span>
-                                                </div>
-                                                <div class="contact_sec">
-                                                    <p class="primary-font"> [09:45AM] Hola requiero informacion 
-                                                    <!-- <p class="pull-right"> </p> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
-                                            <span class="chat-img pull-left">
-                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header_sec">
-                                                    <strong class="primary-font">Conversacion 4 </strong>
-                                                    <span class="badge baged-background-color pull-right">3</span>
-                                                </div>
-                                                <div class="contact_sec">
-                                                    <p class="primary-font"> [09:45AM] Hola requiero informacion 
-                                                    <!-- <p class="pull-right"> </p> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="room-link-{{ room.id }}" class="room-link left clearfix" data-room-id="{{ room.id }}">
-                                            <span class="chat-img pull-left">
-                                              <img src="http://www.eleconomista.es/CanalPDA/files/telegram.png" alt="User Avatar" >
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header_sec">
-                                                    <strong class="primary-font">Conversacion 5 </strong>
-                                                    <span class="badge baged-background-color pull-right">3</span>
-                                                </div>
-                                                <div class="contact_sec">
-                                                    <p class="primary-font"> [09:45AM] Hola requiero informacion 
-                                                    <!-- <p class="pull-right"> </p> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End of member_list -->
+                                <!-- Final of row -->
                             </div>
-                            <!-- Final of row -->
-                        </div>
-                        <!-- Final de col-sm-3 col-md-3 col-lg-3 chat_sidebar -->
-                        
-                        <div id='chat_room_area' class='col-sm-8 col-md-8 col-lg-8'>
-                            <div class='room' id='room-0'>
-                                <div class='col-sm-12 col-md-12 col-lg-12 message_section'>
-                                    <div class='row'>
-                                        <div class='new_message_head'>
-                                            <div class='pull-right'>
-                                                <div class='dropdown'>
-                                                    <button class='dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                                                        <i class='fa fa-cogs' aria-hidden='true'></i> Acciones <span class='caret'></span>
-                                                    </button>
-                                                    <ul class='dropdown-menu dropdown-menu-right' aria-labelledby='dropdownMenu1'>
-                                                        <li><a href='#'>Finalizar por abandono cliente</a></li>
-                                                        <li><a href='#'>Finalizar por Ejecutivo</a></li>
-                                                        <li><a href='#'>Otro</a></li>
-                                                    </ul>
+                            <!-- Final de col-sm-3 col-md-3 col-lg-3 chat_sidebar -->
+                            <div id='chat_room_area' class='col-sm-8 col-md-8 col-lg-8 min-padding '>
+                                <div class='room' id='room-0'>
+                                    <div class='col-sm-12 col-md-12 col-lg-12 message_section'>
+                                        <div class='row'>
+                                            <div class='new_message_head'>
+                                                <div class='pull-right'>
+                                                    <div class='dropdown'>
+                                                        <button class='dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                                                            <i class='fa fa-cogs' aria-hidden='true'></i> Acciones <span class='caret'></span>
+                                                        </button>
+                                                        <ul class='dropdown-menu dropdown-menu-right' aria-labelledby='dropdownMenu1'>
+                                                            <li><a href='#'>Finalizar por abandono cliente</a></li>
+                                                            <li><a href='#'>Finalizar por Ejecutivo</a></li>
+                                                            <li><a href='#'>Otro</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
+                                                <!-- Final de pull-right -->
                                             </div>
-                                            <!-- Final de pull-right -->
+                                            <!-- Final de new_message_head -->
+                                            <div class="chat_area">
+                                                <ul class='list-unstyled'>
+                                                    <li class='left clearfix' >
+                                                        <div class='chat-body1 chat-text-self clearfix'>
+                                                            <p > <em>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</em></p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class='list-unstyled' >
+                                                    <li class='left clearfix' >
+                                                        <div class='chat-body1 chat-text clearfix'>
+                                                            <p > [09:40PM] Beatriz Gonzalez: mensaje de chat + </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class='list-unstyled'>
+                                                    <li class='left clearfix' >
+                                                        <div class='chat-body1 chat-text-self clearfix'>
+                                                            <p > <em>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</em></p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class='list-unstyled'>
+                                                    <li class='left clearfix'>
+                                                        <div class='chat-body1 chat-text clearfix'>
+                                                            <p >[09:40PM] Beatriz Gonzalez: mensaje de chat + </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class='list-unstyled' >
+                                                    <li class='left clearfix' >
+                                                        <div class='chat-body1 chat-text-self clearfix'>
+                                                            <p><em>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</em></p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Final de chat_area-->
                                         </div>
-                                        <!-- Final de new_message_head -->
-                                        <div class="chat_area">
-                                            <!-- Show message sent and received -->
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: mensaje de chat + </p>
+                                        <!-- Final de row -->
+                                    </div>
+                                    <!-- Final de message_section -->
+                                    <div class="message_write">
+                                        <div class='chat_bottom'>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form>
+                                                    <div class='input-group'>
+                                                        <textarea class='option-button form-control custom-control' rows='3' style='resize:none'></textarea>
+                                                        <span class='input-group-btn'>
+                                                            <button id='btn-room-" + data.join + "' class='btn btn-primary option-button'> Enviar </button>
+                                                        </span>
                                                     </div>
-                                                </li>
-                                            </ul>
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text-self clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: mensaje de chat + </p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text-self clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: mensaje de chat + </p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class='list-unstyled'>
-                                                <li class='left clearfix'>
-                                                    <div class='chat-body1 chat-text-self clearfix'>
-                                                        <p>[09:40PM] Beatriz Gonzalez: Mensaje de chat desde ejecutivo</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> <!-- Final de chat_area-->
-                                    </div> <!-- Final de row -->
-                                </div> <!-- Final de message_section -->
-                                  
-                                   <div class="message_write">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="input-group">
-                                                    <textarea class="option-button form-control custom-control" rows="3" style="resize:none"></textarea> 
-                                                    <div class="clearfix"></div>
-                                                    <span class="input-group-btn">
-                                                        <button class="btn btn-primary option-button" type="button"> Enviar </button> 
-                                                    </span>
+                                                </form>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> <!--Final de message_write -->
-                            </div> <!-- End of Room -->
-                        </div> <!-- End of chat_container -->
-                    </div> <!-- End of chat_container -->
-                </div><!--final de col-md-12 bs-example inicial--> 
-                <div class="clearfix"></div>
-                <div style="padding-top:20px;">
-                    <div class="col-md-12 bs-example">
-                        <div class="col-md-12">
-                            <ul class="nav nav-tabs">
-                                <li role="presentation" class="active"><a href="#">Notas</a></li>
-                            </ul>
+                                    </div>
+                                    <!--Final de message_write -->
+                                </div>
+                                <!-- End of Room -->
+                            </div>
+                            <!-- End of chat_container -->
                         </div>
-                        <br>
-                        <br>
-                        <br>
-                        <div class="message_write">
-                            <textarea class="form-control" name="comentario" id="comentario" placeholder="Escribir" rows="5" style="resize:none"></textarea>
-                            <div class="clearfix"></div>
-                            <br>
-                            <button name="comentario" type="submit" class=" pull-right btn btn-primary">Guardar</button>
-                        </div>        
-                    </div> <!--col-md bs de la nota-->
-                </div> <!-- final de style padding -->
-            </div> <!--final de col-md-7 bs-example inicial--> 
-            <div class="col-sm-5 col-md-5 col-lg-5">
-                <div class="col-sm-12 col-md-12 col-lg-12"> 
-                    <div class="panel panel-primary panel-horizontal ">
-                        <div class="panel-heading ">
-                            <div class="panel-contact">
-                                <h3 class="panel-title">Respuestas</h3>
-                            </div> 
-                        
-                        </div>
-                        <div class="panel-body">
-                          Panel content
-                        </div>
-                    </div> <!--<div class="col-sm-3 col-md-3 col-lg-3 "> -->
-                </div>
-                    <br>
-                    <br>
+                        <!-- End of chat_container -->
+                    </div>
+                    <!--final de col-md-12 bs-example inicial-->
                     <div class="clearfix"></div>
-                    <div class="col-sm-12 col-md-12 col-lg-12"> 
-                        <div><strong>Co-Browse Inviter</strong></div>
-                        <strong>Descripción:</strong> 
-                        <span class="medium">GBank Co-Browse offering in a chat</span>
-                        <textarea class="option-button form-control custom-control" rows="7" style="resize:none"></textarea>  
-                    </div> <!--col-sm-12 col-md-12 col-lg-12 -->            
-            </div> <!--<col-sm-5 col-md-5 col-lg-5 ">-->
-        </div> 
-        <!--final de row--> 
+                    <div style="padding-top:5px;">
+                        <div class="col-md-12 bs-example">
+                            <!-- <div class="col-md-12"> -->
+                                <ul class="nav nav-tabs">
+                                    <li role="presentation" class="active"><a href="#">Notas</a></li>
+                                </ul>
+                            <!-- </div> -->
+                            <br>
+                            <div class="message_write">
+                            <form>
+                                <div class='input-group'>
+                                    <textarea class='option-button form-control custom-control' rows='3' style='resize:none'>
+                                        
+                                    </textarea>
+                                    <span class='input-group-btn'>
+                                        <button id='btn-room-" + data.join + "' class='btn btn-primary option-button'>
+                                        Guardar
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                        <!--col-md bs de la nota-->
+                    </div>
+                    <!-- final de style padding -->
+                </div>
+                <!--final de col-md-7 bs-example inicial-->
+                <div class="without-padding col-sm-5 col-md-5 col-lg-5">
+                
+                    <div class="btn-padding col-sm-1 col-md-1 col-lg-1">
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-rotado">
+                                <button class="btn btn-default btn-rotado-width" id='btn-1'><strong><em> Respuestas </em></strong></button>
+                                <button class="btn btn-default btn-rotado-width"  id='btn-2'><strong><em>Contacto</em></strong></button>
+                                <button class="btn btn-default btn-rotado-width" id='btn-3'><strong><em>Conocimiento</em></strong></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="without-padding col-sm-11 col-md-11 col-lg-11">
+                        <div id="panel-1" data-btn-id="1">
+                            <div class="faq_area panel panel-default panel-horizontal" style="border-color: #BDBDBD">
+                                <div class="panel-heading ">
+                                    <div class="panel-contact">
+                                        <h3 class="panel-title">Respuestas</h3>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel-group" id="faqAccordion">
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro Automotriz Con deducible</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Daños materiales. </li>
+                                                        <li> Robo, hurto o uso no autorizadoDaños a terceros.</li>
+                                                        <li> Daños producidos por actos maliciosos, terrorismo y huelga. </li>
+                                                        <li> Fenómenos naturales (granizo, sismo, tormentas). </li>
+                                                        <li> Robo de accesorios. </li>
+                                                        <li> Daños materiales y a terceros ocasionados por carga en el vehículo. </li>
+                                                        <li> Accidentes personales. </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">¿Qué evalúa Seguro Conectado?</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question1" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5>
+                                                    <p>Una vez instalado el dispositivo, éste evaluará tu forma de conducir durante cuatro meses, considerando estos puntos: 1.Si manejas respetando la velocidad apropiada en las zonas donde te mueves. 2.Suavidad y tranquilidad en la aceleración y frenados. 3.Anticipación en tus maniobras y velocidad de reacción ante riesgos. 4.Consistencia entre los puntos anteriores en el total de tus viajes (incluyendo distancias recorridas y horarios de manejo).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro CRM Puntos</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question2" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Answer</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Daños materiales. </li>
+                                                        <li> Robo, hurto o uso no autorizado. </li>
+                                                        <li> Daños a terceros hasta 2.000 UF. </li>
+                                                        <li> Daños producidos por actos maliciosos, terrorismo y huelga. </li>
+                                                        <li> Fenómenos naturales (granizo, sismo, tormentas). </li>
+                                                        <li> Robo de accesorios. </li>
+                                                        <li> Daños materiales y a terceros ocasionados por carga en el vehículo. </li>
+                                                        <li> Accidentes personales.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro de vida con bonificación</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question3" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Descuento en Farmacia Cruz Verde, con tope mensual de $14.000 </li>
+                                                        <li> 50% de Descuento Adicional en Medicamentos Genéricos </li>
+                                                        <li> 40% de Descuento Adicional en medicamentos de Lab. Mintlab </li>
+                                                        <li> 10% de Descuento Adicional en Medicamentos de Marca Nacional e Internacional Daños materiales. </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro de vida catastrófico</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question4" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5>
+                                                    <p>Una vez instalado el dispositivo, éste evaluará tu forma de conducir durante cuatro meses, considerando estos puntos: 1.Si manejas respetando la velocidad apropiada en las zonas donde te mueves. 2.Suavidad y tranquilidad en la aceleración y frenados. 3.Anticipación en tus maniobras y velocidad de reacción ante riesgos. 4.Consistencia entre los puntos anteriores en el total de tus viajes (incluyendo distancias recorridas y horarios de manejo).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question5">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Bolso Protegido</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question5" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Answer</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Daños materiales. </li>
+                                                        <li> Robo, hurto o uso no autorizado. </li>
+                                                        <li> Daños a terceros hasta 2.000 UF. </li>
+                                                        <li> Daños producidos por actos maliciosos, terrorismo y huelga. </li>
+                                                        <li> Fenómenos naturales (granizo, sismo, tormentas). </li>
+                                                        <li> Robo de accesorios. </li>
+                                                        <li> Daños materiales y a terceros ocasionados por carga en el vehículo. </li>
+                                                        <li> Accidentes personales.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question6">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro de Fraude</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question6" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Daños materiales. </li>
+                                                        <li> Robo, hurto o uso no autorizadoDaños a terceros.</li>
+                                                        <li> Daños producidos por actos maliciosos, terrorismo y huelga. </li>
+                                                        <li> Fenómenos naturales (granizo, sismo, tormentas). </li>
+                                                        <li> Robo de accesorios. </li>
+                                                        <li> Daños materiales y a terceros ocasionados por carga en el vehículo. </li>
+                                                        <li> Accidentes personales. </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question7">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Compra Protegida</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question7" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Respuesta</span></h5>
+                                                    <p>Una vez instalado el dispositivo, éste evaluará tu forma de conducir durante cuatro meses, considerando estos puntos: 1.Si manejas respetando la velocidad apropiada en las zonas donde te mueves. 2.Suavidad y tranquilidad en la aceleración y frenados. 3.Anticipación en tus maniobras y velocidad de reacción ante riesgos. 4.Consistencia entre los puntos anteriores en el total de tus viajes (incluyendo distancias recorridas y horarios de manejo).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question8">
+                                                <h4 class="panel-title">
+                                                <a href="#" class="ing">Seguro de Mascotas</a>
+                                          </h4>
+                                            </div>
+                                            <div id="question8" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <h5><span class="label label-primary">Answer</span></h5> ¿Qué cubre?
+                                                    <br>
+                                                    <ol>
+                                                        <li> Daños materiales. </li>
+                                                        <li> Robo, hurto o uso no autorizado. </li>
+                                                        <li> Daños a terceros hasta 2.000 UF. </li>
+                                                        <li> Daños producidos por actos maliciosos, terrorismo y huelga. </li>
+                                                        <li> Fenómenos naturales (granizo, sismo, tormentas). </li>
+                                                        <li> Robo de accesorios. </li>
+                                                        <li> Daños materiales y a terceros ocasionados por carga en el vehículo. </li>
+                                                        <li> Accidentes personales.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/panel-group-->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel-2" data-btn-id="2" style="display: none;" ">
+                            <div class="faq_area panel panel-default panel-horizontal " style="border-color: #BDBDBD ">
+                                    <div class="panel-heading " >
+                                        <div class="panel-contact ">
+                                            <h3 class="panel-title ">Contacto</h3>
+                                        </div> 
+                                    </div>
+                                    <div class="panel-body ">
+                                        <div class="panel-group " id="faqAccordion ">
+                                            <p> prueba </p>  
+                                        </div>
+                                        <!--/panel-group-->
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="panel-3" data-btn-id = "3" style="display: none; ">
+                            <div class="faq_area panel panel-default panel-horizontal " style="border-color: #BDBDBD ">
+                                <div class="panel-heading " >
+                                    <div class="panel-contact ">
+                                        <h3 class="panel-title ">Conocimiento</h3>
+                                    </div> 
+                                </div>
+                                <div class="panel-body ">
+                                    <div class="panel-group " id="faqAccordion ">
+                                        <p> prueba 2 </p>  
+                                    </div>
+                                    <!--/panel-group-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!--final de row--> 
+        </div>
+        <!--final de container--> 
     </div>
-    <!--final de container--> 
-</div>
-<!-- End of main_section -->
-</div>
+    <!-- End of main_section -->  
+ </body><!-- End Body -->
+<script>
+$(function() {
+    // Correctly decide between ws:// and wss://
+    var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
+    var ws_path = ws_scheme + '://' + window.location.host + "/chat/stream/";
+    console.log("Connecting to " + ws_path);
+    var socket = new ReconnectingWebSocket(ws_path);
+    var last_chat_show = 0;
+
+    // Handle incoming messages
+    socket.onmessage = function(message) {
+        // Decode the JSON
+        console.log("Got websocket message " + message.data);
+        var data = JSON.parse(message.data);
+        // Handle errors
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+        // Handle joining
+        if (data.join) {
+            console.log("Joining room " + data.join);
+            var roomdiv = $(
+                "<div class='room' id='room-" + data.join + "'>" +
+                  // When user click on row we add attribute id='room-1'> 
+                    "<div class='col-sm-12 col-md-12 col-lg-12 message_section'>" +
+                        "<div class='row'>" +
+                          "<div class='new_message_head'>" +
+                            "<div class='pull-right'>" +
+                              "<div class='dropdown'>" +
+                                "<button class='dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" +
+                                  "<i class='fa fa-cogs' aria-hidden='true'></i> Acciones <span class='caret'></span>" +
+                                "</button>" +
+                                "<ul class='dropdown-menu dropdown-menu-right' aria-labelledby='dropdownMenu1'>" +
+                                    "<li><a href='#'>Finalizar por abandono cliente</a></li>" +
+                                    "<li><a href='#'>Finalizar por Ejecutivo</a></li>" +
+                                    "<li><a href='#'>Otro</a></li>" +
+                                "</ul>"+
+                              "</div>" +
+                            "</div> " + // End of pull-right
+                          "</div>" + // End of new_message_head 
+                          "<div class='chat_area'>" +
+                          // Show message sent and received 
+                          "</div>" +
+                          "<div id='chat_submit_form'>" +
+                          // Show form where agent can send message to customer
+                          "</div>" +
+                        "</div>" +
+                    "</div>" + //End of message_section
+                    "<div class='message_write'>" +
+                        "<div class='chat_bottom'>" +
+                            "<div class='row'>" +
+                                "<div class='col-lg-12'>" +
+                                    "<form>" +
+                                        "<div class='input-group'>" +
+                                            "<textarea class='option-button form-control custom-control' rows='3' style='resize:none'></textarea>" + 
+                                                "<span class='input-group-btn'>" +
+                                                    "<button id='btn-room-" + data.join + "' class='btn btn-primary option-button' > Enviar </button> " +
+                                                "</span>" +
+                                        "</div>" +
+                                    "</form>" +
+                                "</div>" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>" +
+                "</div>" 
+
+            );
+            // Hook up send button to send a message
+            roomdiv.find("form").on("submit", function() {
+                console.log("submit: " + roomdiv.find("textarea").val());
+                socket.send(JSON.stringify({
+                    "command": "send",
+                    "room": data.join,
+                    "message": roomdiv.find("textarea").val()
+                }));
+                roomdiv.find("textarea").val("");
+                return false;
+            });
+            $("#chat_room_area").append(roomdiv);
+            $("#room-" + data.join).hide();
+            // Handle leaving
+        } else if (data.leave) {
+            console.log("Leaving room " + data.leave);
+            $("#room-" + data.leave).remove();
+            // Handle getting a message
+        } else if (data.message || data.msg_type != 0) {
+            // var msgdiv = $("#room-" + data.room + " .messages");
+            console.log('DATA ROOM ' + data.room);
+            var msgdiv = $("#room-" + data.room + " .chat_area");
+            var ok_msg = "";
+            // msg types are defined in chat/settings.py
+            // Only for demo purposes is hardcoded, in production scenarios, consider call a service.
+            switch (data.msg_type) {
+                case 0:
+                    if (data.message.length < 10) {
+                        ok_msg =
+                            "<ul class='list-unstyled'>" +
+                            "<li class='left clearfix'>" +
+                            "<div class='chat-body1 chat-text clearfix'>" +
+                            "<p>" + data.username + ": " + data.message + "</p>" +
+                            "</div>" +
+                            "</li>" +
+                            "</ul>";
+                    } else {
+                        ok_msg =
+                            "<ul class='list-unstyled'>" +
+                            "<li class='left clearfix'>" +
+                            "<div class='chat-body1 chat-text-self clearfix'>" +
+                            "<p>" + data.username + ": " + data.message + "</p>" +
+                            "</div>" +
+                            "</li>" +
+                            "</ul>";
+                    }
+                    break;
+                case 1:
+                    // Warning / Advice messages
+                    ok_msg = "<div class='contextual-message text-warning'>" + data.message +
+                        "</div>";
+                    break;
+                case 2:
+                    // Alert / Danger messages
+                    ok_msg = "<div class='contextual-message text-danger'>" + data.message +
+                        "</div>";
+                    break;
+                case 3:
+                    // "Muted" messages
+                    ok_msg = "<div class='contextual-message text-muted'>" + data.message +
+                        "</div>";
+                    break;
+                case 4:
+                    // User joined room
+                    ok_msg = "<div class='contextual-message text-muted'>" + data.username +
+                        " joined the room!" +
+                        "</div>";
+                    break;
+                case 5:
+                    // User left room
+                    ok_msg = "<div class='contextual-message text-muted'>" + data.username +
+                        " left the room!" +
+                        "</div>";
+                    break;
+                default:
+                    console.log("Unsupported message type!");
+                    return;
+            }
+            msgdiv.append(ok_msg);
+
+            msgdiv.scrollTop(msgdiv.prop("scrollHeight"));
+        } else {
+            console.log("Cannot handle message!");
+        }
+    };
+
+    // Says if we joined a room or not by if there's a div for it
+    inRoom = function(roomId) {
+        // return $("#room-" + roomId).length > 0;
+        return $("#room-" + roomId).is(':disabled');
+    };
+
+    isJoined = function(roomId) {
+        return $("#room-" + roomId).length > 0;
+        // return $("#room-" + roomId).is(':disabled');
+    };
+
+    // Room join/leave
+    $("li.room-link").click(function() {
+        roomId = $(this).attr("data-room-id");
+        if (inRoom(roomId)) {
+            // Leave room
+            // $(this).removeClass("joined");
+            // socket.send(JSON.stringify({
+            //     "command": "leave",
+            //     "room": roomId
+            // }));
+        } else {
+            // Join room
+            if (isJoined(roomId)) {
+                $(this).addClass("active");
+                $("#room-link-" + last_chat_show).removeClass("active");
+                $("#room-" + last_chat_show).hide();
+                $("#room-" + roomId).show();
+                last_chat_show = roomId;
+            } else {
+                socket.send(JSON.stringify({
+                    "command": "join",
+                    "room": roomId
+                }));
+            }
+           
+           
+        }
+    });
+
+    inPanel = function(panelId) {
+        // return $("#room-" + roomId).length > 0;
+        return $("#panel-" + panelId).is(':disabled');
+    };
+
+
+    $("#btn-1").click(function(){
+        $("#panel-1").show();
+        $("#panel-2").hide();
+        $("#panel-3").hide();
+    });
+
+    $("#btn-2").click(function(){
+        $("#panel-2").show();
+        $("#panel-1").hide();
+        $("#panel-3").hide();
+    });
+
+    $("#btn-3").click(function(){
+        console.log("click3");
+        $("#panel-3").show();
+        $("#panel-1").hide();
+        $("#panel-2").hide();
+    });
+
+    // Helpful debugging
+    socket.onopen = function() {
+        console.log("Connected to chat socket");
+
+        function myFunction() {
+
+            var arrayRooms = "{{rooms|safe}}".split(',');
+            for (var i = 0; i < arrayRooms.length; i++) {
+                console.log("Ciclo for: " + arrayRooms[i]);
+                socket.send(JSON.stringify({
+                    "command": "join",
+                    "room": i + 1
+                }));
+            }
+            return true;
+        }
+        console.log("myFunction: " + myFunction());
+    };
+
+    socket.onclose = function() {
+        console.log("Disconnected from chat socket");
+    }
+});
+</script>

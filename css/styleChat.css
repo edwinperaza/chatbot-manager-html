@@ -144,14 +144,16 @@
 }
 .chat_area {
   float: left;
-  height: 350px;
+  height: 290px;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
 }
+
 .chat_area li {
-  padding: 14px 14px 0;
+  padding: 0px 2px 0;
 }
+
 .chat_area li .chat-img1 img {
   height: 40px;
   width: 40px;
@@ -161,13 +163,21 @@
   height: 40px;
   width: 130px;
 }
-.chat_area .chat-body1 {
-  /*margin-left: 50px;*/
+
+.chat_area .admin_chat .chat-body1 {
+  margin-left: 0;
+  margin-right: 50px;
 }
+.chat_area li:last-child {
+  padding-bottom: 0px;
+}
+
 .chat-body1 p {
   background: #fbf9fa none repeat scroll 0 0;
-  padding: 10px;
-  font-size: 11px;
+  padding: 0px;
+  font-size: 12px;
+  padding: 0px 0px 0px 0px; 
+  margin-bottom: 0px;
 }
 
 .chat-text {
@@ -177,17 +187,15 @@
 .chat-text-self {
   color: #0000FF;
 } 
-.chat_area .admin_chat .chat-body1 {
-  margin-left: 0;
-  margin-right: 50px;
-}
-.chat_area li:last-child {
-  padding-bottom: 10px;
-}
 
 .chat_time {
   font-size: 11px;
   padding: 10px 0px 10px 0px;
+}
+
+.chat_area_margin {
+  margin-top: 2px;
+  margin-bottom: 0px;
 }
 
 .message_write {
@@ -195,6 +203,7 @@
   float: left;
   padding: 15px;
   width: 100%;
+  border: 1px solid #dddddd;
 }
 
 .message_write textarea.form-control {
@@ -221,6 +230,10 @@
 
 /*Css modificado por Beatriz y Marcelo*/
 
+.nav_bar_margin {
+  margin-bottom: 0px;
+}
+
 .member_list .active {
   background: #428bca;
   color: #fff;
@@ -231,15 +244,14 @@ input {
 }
 
 .bs-example {
-padding: 10px;
+padding: 5px;
 background-color: #fff;
-border: 1px solid #ddd;
+border: 1px solid #BDBDBD;
 }
 
 .center-landing-chat {
     text-align: center;
-    border: 1px solid grey;
-    padding: 150px 0;
+    padding: 125px 0;
 }
 
 .baged-background-color {
@@ -255,10 +267,172 @@ border: 1px solid #ddd;
     padding: 0px 10px;
 }
 
-.mycontent-left {
-  border-right: 1px solid #fff;
+.container {
+    margin-right: 70px;
+    margin-left: 70px;
 }
 
-.test{
-  float: left;
+@media (min-width: 1200px)
+.container {
+    width: 1280px;
+}
+
+.faq_area {
+  height: 655px;
+}
+
+.without-padding {
+padding: 0px;
+}
+
+.min-padding {
+padding: 0px 0px 0px 5px;
+}
+
+.btn-padding {
+padding: 1px 0px 0px 0px;
+}
+
+.body-background {
+  background-color: #eee
+}
+
+.btn-rotado-width {
+width: 217px;
+}
+
+.btn-rotado {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transform: rotate(90deg) ;
+}
+.btn-group-vertical-rotado {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transform: rotate(90deg) ;
+}
+
+
+.btn-group-justified1 {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.btn-group-justified1 > .btn,
+.btn-group-justified1 > .btn-group {
+  display: table-cell;
+  float: none;
+  width: 1%;
+}
+.btn-group-justified1 > .btn-group .btn {
+  width: 100%;
+  height: 100%;
+}
+
+
+.navbar-default {
+  background-color: #337ab7;
+  border-color: #2b85c0;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #337ab7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffffff;
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-toggle {
+  border-color: #2b85c0;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #2b85c0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #2b85c0;
+  }
 }
